@@ -1,5 +1,7 @@
 export interface TwitterCard {
     userName: string
     name: string
-    avatar: string
+    isFollowing: boolean
 }
+
+export type TwitterCards = TwitterCard[]
