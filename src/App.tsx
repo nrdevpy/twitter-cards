@@ -1,19 +1,36 @@
 import { TwitterFollowCard } from "./components/TwitterFollowCard"
-import { TwitterCard } from "./type"
+import { TwitterCards } from "./type"
 
-const user: TwitterCard = {
-  userName: "n3lsonroj4s",
-  name: "Nelson Rojas Janda",
-  avatar: "https://unavatar.io/twitter/n3lsonroj4s"
-}
+const users: TwitterCards = [
+  {
+    userName: "n3lsonroj4s",
+    name: "Nelson Rojas Janda",
+    isFollowing: false,
+  },
+  {
+    userName: "EvilAFM",
+    name: "Alexelcapo",
+    isFollowing: false,
+  },
+  {
+    userName: "midudev",
+    name: "Miguel Angel Durán",
+    isFollowing: false,
+  }
+]
 
 function App() {
-  const { userName, name, avatar } = user
-
   return (
     <div className="min-w-screen min-h-screen">
       <h1 className="text-3xl font-bold text-center py-12">Twitter Cards</h1>
-      <TwitterFollowCard userName={userName} name={name} avatar={avatar} />
+      <section className="flex flex-wrap justify-center gap-8">
+        {users.map((user) => {
+          const { userName, name, isFollowing } = user
+          return (
+            <TwitterFollowCard userName={userName} name={name} isFollowing={isFollowing} />
+          )
+        })}
+      </section>
     </div>
   )
 }
