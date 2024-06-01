@@ -5,7 +5,7 @@ const users: TwitterCards = [
     {
         userName: "n3lsonroj4s",
         name: "Nelson Rojas Janda",
-        isFollowing: false,
+        isFollowing: true,
     },
     {
         userName: "EvilAFM",
