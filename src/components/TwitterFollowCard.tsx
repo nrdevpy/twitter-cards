@@ -3,6 +3,7 @@ import { TwitterCard } from "../type"
 type Props = TwitterCard
 
 export const TwitterFollowCard: React.FC<Props> = ({ userName, name, isFollowing }) => {
+    const atUserName = `@${userName}`
     return (
         <li className="flex items-center justify-between max-w-xs py-1 px-4 min-w-[22rem]">
             <header className="flex items-center justify-center gap-2">
@@ -13,7 +14,7 @@ export const TwitterFollowCard: React.FC<Props> = ({ userName, name, isFollowing
                 />
                 <div className="flex flex-col">
                     <strong>{name}</strong>
-                    <span>@{userName}</span>
+                    <span>{atUserName}</span>
                 </div>
             </header>
             <aside>

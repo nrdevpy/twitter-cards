@@ -1,5 +1,5 @@
 export interface User {
-    id: string
+    readonly id: string
     userName: string
     name: string
     isFollowing: boolean
