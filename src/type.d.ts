@@ -5,6 +5,10 @@ export interface User {
     isFollowing: boolean
 }
 
-export type Users = User[]
+export interface TwitterFollowButton {
+    isFollowing: TwitterIsFollowingType
+}
 
+export type Users = User[]
 export type TwitterCard = Omit<User, "id">
+type TwitterIsFollowingType = Pick<TwitterCard, "isFollowing">
